@@ -5,6 +5,7 @@
     "npm:@types/react-dom@^18.3.1": "18.3.1",
     "npm:@types/react@^18.3.11": "18.3.12",
     "npm:@vitejs/plugin-react@^4.3.3": "4.3.3_vite@5.4.10_@babel+core@7.25.9",
+    "npm:axios@^1.7.7": "1.7.7",
     "npm:bootstrap@^4.6.0": "4.6.2_jquery@3.7.1_popper.js@1.16.1",
     "npm:eslint-plugin-react-hooks@5": "5.0.0_eslint@9.13.0",
     "npm:eslint-plugin-react-refresh@~0.4.13": "0.4.13_eslint@9.13.0",
@@ -652,6 +653,14 @@
     "aws4@1.13.2": {
       "integrity": "sha512-lHe62zvbTB5eEABUVi/AwVh0ZKY9rMMDhmm+eeyuuUQbQ3+J+fONVQOZyj+DdrvD4BY33uYniyRJ4UJIaSKAfw=="
     },
+    "axios@1.7.7": {
+      "integrity": "sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==",
+      "dependencies": [
+        "follow-redirects",
+        "form-data@4.0.1",
+        "proxy-from-env"
+      ]
+    },
     "balanced-match@1.0.2": {
       "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
     },
@@ -1080,11 +1089,22 @@
     "flatted@3.3.1": {
       "integrity": "sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw=="
     },
+    "follow-redirects@1.15.9": {
+      "integrity": "sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ=="
+    },
     "forever-agent@0.6.1": {
       "integrity": "sha512-j0KLYPhm6zeac4lz3oJ3o65qvgQCcPubiyotZrXqEaG4hNagNYO8qdlUrX5vwqv9ohqeT/Z3j6+yW067yWWdUw=="
     },
     "form-data@2.3.3": {
       "integrity": "sha512-1lLKB2Mu3aGP1Q/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7UtZ1N38rVXm+6+MEhJQ==",
+      "dependencies": [
+        "asynckit",
+        "combined-stream",
+        "mime-types"
+      ]
+    },
+    "form-data@4.0.1": {
+      "integrity": "sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==",
       "dependencies": [
         "asynckit",
         "combined-stream",
@@ -1773,6 +1793,9 @@
         "react-is"
       ]
     },
+    "proxy-from-env@1.1.0": {
+      "integrity": "sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg=="
+    },
     "pseudomap@1.0.2": {
       "integrity": "sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ=="
     },
@@ -1941,7 +1964,7 @@
         "combined-stream",
         "extend",
         "forever-agent",
-        "form-data",
+        "form-data@2.3.3",
         "har-validator",
         "http-signature",
         "is-typedarray",
@@ -2397,9 +2420,11 @@
     "packageJson": {
       "dependencies": [
         "npm:@eslint/js@^9.13.0",
+        "npm:@libsql/client@0.14",
         "npm:@types/react-dom@^18.3.1",
         "npm:@types/react@^18.3.11",
         "npm:@vitejs/plugin-react@^4.3.3",
+        "npm:axios@^1.7.7",
         "npm:bootstrap@^4.6.0",
         "npm:eslint-plugin-react-hooks@5",
         "npm:eslint-plugin-react-refresh@~0.4.13",

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "axios": "^1.7.7",
     "bootstrap": "^4.6.0",
     "lodash": "^4.17.21",
     "node-sass": "^4.14.1",

@@ -1,5 +1,4 @@
-// src/contexts/CourseContext.tsx
-import React, { createContext, useState, FC, ReactNode } from 'react';
+import { createContext, useState, FC, ReactNode } from 'react';
 import { Course } from '../types';
 
 interface CourseContextType {
