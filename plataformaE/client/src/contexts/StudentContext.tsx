@@ -1,5 +1,5 @@
 
-import React, { createContext, useState, FC, ReactNode } from 'react';
+import React,{ createContext, useState, FC, ReactNode } from 'react';
 import { Student } from '../types';
 
 interface StudentContextType {

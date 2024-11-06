@@ -17,7 +17,7 @@ const CourseRegistration: React.FC = () => {
 
     return (
         <div>
-            <h2>Enroll in a Course</h2>
+            <h2>Inscribete en un curso</h2>
             <select onChange={(e) => setSelectedStudent(Number(e.target.value))}>
                 <option value="">Select Student</option>
                 {students.map((student) => (
