@@ -19,7 +19,7 @@ const CourseRegistration: React.FC = () => {
         <div>
             <h2>Inscribete en un curso</h2>
             <select onChange={(e) => setSelectedStudent(Number(e.target.value))}>
-                <option value="">Select Student</option>
+                <option value="">Selecciona estudiante</option>
                 {students.map((student) => (
                     <option key={student.id} value={student.id}>
                         {student.name}
@@ -28,7 +28,7 @@ const CourseRegistration: React.FC = () => {
             </select>
 
             <select onChange={(e) => setSelectedCourse(Number(e.target.value))}>
-                <option value="">Select Course</option>
+                <option value="">Selecciona curso</option>
                 {courses.map((course) => (
                     <option key={course.id} value={course.id}>
                         {course.title}
@@ -36,7 +36,7 @@ const CourseRegistration: React.FC = () => {
                 ))}
             </select>
 
-            <button onClick={handleEnroll}>Enroll</button>
+            <button onClick={handleEnroll}>Inscribete!</button>
         </div>
     );
 };

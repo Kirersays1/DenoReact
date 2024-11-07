@@ -10,6 +10,8 @@ const StudentForm: React.FC = () => {
     const [password, setPassword] = useState('');
     const [inscriptionDate, setInscriptionDate] = useState('');
     const [role, setRole] = useState<'I'|'A'>('A'); // 'A' para default
+    const db = turso;
+
 
     const handleSubmit = () => {
         addStudent({
@@ -22,9 +24,8 @@ const StudentForm: React.FC = () => {
             enrolledCourses: [],
         });
 
-        console.log(name,email,password,inscriptionDate,role);
-
-        turso.execute("INSERT INTO usuario(nombre,password,email,rol) VALUES ({name},{password},{email},{role})");
+        console.log(`Insertando usuario con nombre: ${name}, email: ${email}, password: ${password}, rol: ${role}`);
+        db.execute(`INSERT INTO usuario(nombre, password, email, rol) VALUES ('${name}', '${password}', '${email}', '${role}')`);
 
         setName('');
         setEmail('');

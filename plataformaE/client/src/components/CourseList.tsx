@@ -1,4 +1,4 @@
-// src/components/CourseList.tsx
+
 import React, { useContext } from 'react';
 import { CourseContext } from '../contexts/CourseContext';
 
@@ -7,7 +7,7 @@ const CourseList: React.FC = () => {
 
     return (
         <div>
-            <h2>Available Courses</h2>
+            <h2>Cursos disponibles</h2>
             <ul>
                 {courses.map((course) => (
                     <li key={course.id}>
