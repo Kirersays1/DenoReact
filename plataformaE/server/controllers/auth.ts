@@ -1,7 +1,7 @@
 /// server/controllers/auth.ts
 
 import { RouterContext, Context } from "../deps";
-import db from "../db/db";
+import db from "../../client/src/db/db";
 import { bcrypt } from "../deps";
 
 interface LoginRequest {

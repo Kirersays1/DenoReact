@@ -1,9 +1,9 @@
-// src/components/CourseRegistration.tsx
+// src/components/CourseStudentRegistration.tsx
 import React, { useContext, useState } from 'react';
 import { CourseContext } from '../contexts/CourseContext';
 import { StudentContext } from '../contexts/StudentContext';
 
-const CourseRegistration: React.FC = () => {
+const CourseStudentRegistration: React.FC = () => {
     const { courses } = useContext(CourseContext)!;
     const { students, enrollInCourse } = useContext(StudentContext)!;
     const [selectedStudent, setSelectedStudent] = useState<number | null>(null);
@@ -41,4 +41,4 @@ const CourseRegistration: React.FC = () => {
     );
 };
 
-export default CourseRegistration;
+export default CourseStudentRegistration;

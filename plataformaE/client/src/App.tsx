@@ -4,7 +4,8 @@ import { CourseProvider } from './contexts/CourseContext';
 import { StudentProvider } from './contexts/StudentContext';
 import CourseList from './components/CourseList';
 import StudentForm from './components/StudentForm';
-import CourseRegistration from './components/CourseRegistration';
+import CourseStudentRegistration from './components/CourseStudentRegistration.tsx';
+import CourseForm from "./components/CourseForm.tsx";
 
 const App: React.FC = () => {
     return (
@@ -13,8 +14,9 @@ const App: React.FC = () => {
                 <div>
                     <h1>Copia de Moodle</h1>
                     <StudentForm />
+                    <CourseForm />
                     <CourseList />
-                    <CourseRegistration />
+                    <CourseStudentRegistration />
                 </div>
             </StudentProvider>
         </CourseProvider>

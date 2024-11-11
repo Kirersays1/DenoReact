@@ -3,7 +3,6 @@ export interface Student {
     name: string;
     email: string;
     password: string;           // New field for password
-    inscriptionDate: string;    // New field for the date of inscription
     role: 'I' | 'A';            // Roles I: Instructor | A: Alumno
     enrolledCourses: number[];
 }

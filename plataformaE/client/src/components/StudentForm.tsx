@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { StudentContext } from '../contexts/StudentContext';
-import {turso} from 'C:/Users/kirby/OneDrive/Documentos/GitHub/DenoReact/plataformaE/server/db/db.ts'
+import {turso} from '../db/db.ts'
 
 const StudentForm: React.FC = () => {
     const { addStudent } = useContext(StudentContext)!;
@@ -8,29 +8,24 @@ const StudentForm: React.FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [inscriptionDate, setInscriptionDate] = useState('');
     const [role, setRole] = useState<'I'|'A'>('A'); // 'A' para default
-    const db = turso;
-
 
     const handleSubmit = () => {
         addStudent({
             id: Date.now(),
             name,
             email,
-            password,
-            inscriptionDate: new Date().toISOString().split('T')[0], // set current date in YYYY-MM-DD format
+            password,// set current date in YYYY-MM-DD format
             role,
             enrolledCourses: [],
         });
 
         console.log(`Insertando usuario con nombre: ${name}, email: ${email}, password: ${password}, rol: ${role}`);
-        db.execute(`INSERT INTO usuario(nombre, password, email, rol) VALUES ('${name}', '${password}', '${email}', '${role}')`);
+        turso.execute(`INSERT INTO usuario(nombre, password, email, rol) VALUES ('${name}', '${password}', '${email}', '${role}')`);
 
         setName('');
         setEmail('');
         setPassword('');
-        setInscriptionDate('');
         setRole('A');
     };
 
