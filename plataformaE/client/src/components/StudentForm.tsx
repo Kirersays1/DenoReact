@@ -31,7 +31,7 @@ const StudentForm: React.FC = () => {
         setEmail('');
         setPassword('');
         setInscriptionDate('');
-        setRole('I');
+        setRole('A');
     };
 
     return (
