@@ -14,15 +14,15 @@ const CourseList: React.FC = () => {
         <table>
             <thead>
             <tr>
-                <th>ID</th>
+                {/*<th>ID</th>*/}
                 <th>Titulo</th>
                 <th>Descripcion</th>
             </tr>
             </thead>
             <tbody>
             {courses.map((course) => (
-                <tr key={course.id_materia}> {/* Asigna `id` como `key` */}
-                    <td>{course.id_materia}</td>
+                <tr key={course.id}> {/* Asigna `id` como `key` */}
+                    {/*<td>{course.id}</td>*/}
                     <td>{course.title}</td>
                     <td>{course.description}</td>
                 </tr>
